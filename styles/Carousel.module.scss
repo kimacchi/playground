@@ -1,0 +1,27 @@
+.container{
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    overflow-y: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-x: hidden;
+  }
+  
+  .card_container{
+    display: flex;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+  
+  .img{
+    width: 300px !important;
+    height: 500px !important;
+    object-fit: cover;
+    margin-right: 40px;
+    object-position: 100% center ;
+  }
+  
+  

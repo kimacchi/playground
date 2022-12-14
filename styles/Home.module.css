@@ -1,26 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
 .container{
-  background-color: black;
-  height: 100vh;
-  width: 100vw;
-  overflow-y: hidden;
+  color: white;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  overflow-x: hidden;
+  font-family: "Orbitron", sans-serif;
 }
 
-.card_container{
+.container > .sum{
+  width: 50%;
+  text-align: center;
+  font-size: 24px;
+  line-height: 150%;
+}
+
+.container > .sum > a{
+  text-decoration: underline;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+.container > .sum > a:hover{
+  color: gray;
+  text-shadow: 0px 0px 16px gray;
+}
+
+.list{
   display: flex;
-  position: absolute;
-  left: 50%;
-  top: 50%;
+  flex-direction: column;
+  align-items: center;
 }
 
-.img{
-  width: 300px !important;
-  height: 500px !important;
-  object-fit: cover;
-  margin-right: 40px;
-  object-position: 100% center ;
+.list > a{
+  color: gray;
+  text-decoration: underline;
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+.list > a:hover{
+  scale: 1.05;
+  color: white;
+  text-shadow: 0px 0px 16px rgba(255, 255, 255, 1);
 }
 
+.header {
+  font-size: 86px;
+  letter-spacing: 5px;
+  height: 120px;
+  font-weight: 900;
+  background: linear-gradient(291deg, #1f4037, #99f2c8, #1f4037);
+  background-size: 600% 600%;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: AnimationName 6s ease infinite;
+  -moz-animation: AnimationName 6s ease infinite;
+  animation: AnimationName 6s ease infinite;
+  padding: 0;
+  margin: 0;
+  margin-top: 40px;
+  /* margin-bottom: 20px; */
+
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:0% 48%}
+  50%{background-position:100% 53%}
+  100%{background-position:0% 48%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:0% 48%}
+  50%{background-position:100% 53%}
+  100%{background-position:0% 48%}
+}
+@keyframes AnimationName {
+  0%{background-position:0% 48%}
+  50%{background-position:100% 53%}
+  100%{background-position:0% 48%}
+}
