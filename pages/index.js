@@ -7,13 +7,13 @@ export default function Home() {
     <div className={styles.container}>
       <AnimatePresence>
         <motion.h1 
-          className={styles.header}
+          className={styles.header_flat}
           initial={{opacity: 0, y: -70}}
           animate={{opacity: 1, y: 0}}
           exit={{opacity: 0, y:-70}}
           transition={{duration: 1}}
         >
-          {"Kima's Workshop."}
+          {"Kima's "}<span className={styles.header}>Workshop.</span>
         </motion.h1>
         <motion.p
           className={styles.sum}
@@ -38,7 +38,7 @@ export default function Home() {
         >
           <p>List of subpages.</p>
           <Link href="/carousel">
-            <a>Carousel</a>
+            Carousel
           </Link>
         </motion.div>
       </AnimatePresence>

@@ -1,7 +1,8 @@
 import Head from 'next/head'
 import styles from '../styles/Carousel.module.scss'
 import { useState, useRef } from 'react'
-
+import Image from "next/image"
+import { v4 } from 'uuid'
 
 // storing the images in an array for convenience.
 const images = [
@@ -99,11 +100,11 @@ export default function Carousel() {
     }, { duration: 1200, fill: "forwards" })
 
     // we animate each of our images to move on scroll.
-    imgRef.current.map((e) => {
-      e.animate({
-        objectPosition: `${100 +  nextPercentageLocal}% center`
-      }, { duration: 1200, fill: "forwards" });
-    })
+    // imgRef.current.map((e) => {
+    //   e.animate({
+    //     objectPosition: `${100 +  nextPercentageLocal}% center`
+    //   }, { duration: 1200, fill: "forwards" });
+    // })
   }
     // we set our event listeners to the root.
     // since we use nextjs, there is a chance that our rendered content will
@@ -132,14 +133,19 @@ export default function Carousel() {
        {
         images.map((e, index)=>{
           return (
-            <img 
-              key={e.key}
-              src={e.url}
-              className={styles.img}
-              draggable={false}
-              ref={(el) => (imgRef.current[index] = el)}
-              alt="image"
-            />
+            <div key={v4()} className={styles.img}>
+              <Image 
+                src={e.url}
+                key={e.key}
+                className={styles.img}
+                draggable={false}
+                ref={(el) => (imgRef.current[index] = el)}
+                alt="image"
+                fill
+                // width={300}
+                // height={500}
+              />
+            </div>
           )
         })
        }
