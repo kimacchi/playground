@@ -1,5 +1,6 @@
 import styles from "../styles/Home.module.css"
 import {motion, AnimatePresence} from "framer-motion"
+import Link from "next/link"
 
 export default function Home() {
   return (
@@ -36,7 +37,9 @@ export default function Home() {
           transition={{duration: 1}}
         >
           <p>List of subpages.</p>
-          <a href="/carousel">Carousel</a>
+          <Link href="/carousel">
+            <a>Carousel</a>
+          </Link>
         </motion.div>
       </AnimatePresence>
     </div>
